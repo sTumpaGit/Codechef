@@ -21,6 +21,14 @@ Input:
 8 3 6
 5
 4 5 1 2 3
+
+Output:
+1
+2
+2
+
+*/
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -54,54 +62,5 @@ class Codechef
 	        System.out.println(count);
 	        
 	    }
-	}
-}
-
-Output:
-1
-2
-2
-
-*/
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-/* Name of the class has to be "Main" only if the class is public. */
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-            	try{
-	    Scanner in = new Scanner(System.in);
-	    int T= in.nextInt();
-	    
-	    for(int i=0; i<T; i++){
-	        
-	        int N = in.nextInt();
-	        ArrayList<Integer> carspeeds = new ArrayList<>();
-	        int compared_speed = 0;
-	        int count = 0;
-	        for(int j=0; j<N; j++){
-	            carspeeds.add(j,in.nextInt());
-	            if(j==0){ compared_speed = carspeeds.get(j); count++;}
-	            else{
-	                if(carspeeds.get(j)<=compared_speed){
-	                    count++;
-	                    compared_speed = carspeeds.get(j);
-	                }
-	            }
-	            
-	        }
-	        System.out.println(count);
-	        
-	    }
-	    
-	    
-	}catch(Exception e){
-	    
-	}
-	
 	}
 }
